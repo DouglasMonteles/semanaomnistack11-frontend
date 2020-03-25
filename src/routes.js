@@ -2,12 +2,19 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Logon from './pages/Logon';
+import Register from './pages/Register';
+
+/* 
+    react-router verifica se o 'path' raiz começa com o que foi indicado na url, caso começe com
+    o indicado, ele redireciona. O 'exact' verifica exatamente o caminho raiz
+*/
 
 export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" component={Logon} />
+                <Route path="/" exact component={Logon} />
+                <Route path="/register" component={Register} />
             </Switch>
         </BrowserRouter>
     );
